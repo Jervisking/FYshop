@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.demo.fyshop.order.vo.OrderItem" table="orderitem">
+		<id name="itemid">
+			<generator class="native"/>
+		</id>
+		
+		<property name="count"/>
+		<property name="subtotal"/>
+		<!-- 关联->商品 -->
+		<many-to-one name="product" lazy="false" class="com.demo.fyshop.product.vo.Product" column="pid"></many-to-one>
+		<!-- 关联->订单 -->
+		<many-to-one name="order" class="com.demo.fyshop.order.vo.Order" column="oid"></many-to-one>
+	</class>
+</hibernate-mapping>
