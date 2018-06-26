@@ -2,4 +2,7 @@
 飞鱼购物网站 (SSH框架)
 编码方式:UTF-8
 
-用户邮箱激活: 服务器 MailServer   客户端 Foxmail
+开发工具:MyEclipse
+数据库:MySQL
+
+用户邮箱激活操作: MailServer + Foxmail
